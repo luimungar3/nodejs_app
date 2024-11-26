@@ -1,5 +1,5 @@
 job('MiAplicacionNodeJSDocker') {
-    description('Pipeline para mi aplicación Node.js con Docker usando DSL')
+    description('aplicación Node.js con Docker')
     
     scm {
         git('https://github.com/luimungar3/nodejs_app', 'main') { node ->
@@ -13,12 +13,12 @@ job('MiAplicacionNodeJSDocker') {
     }
     
     wrappers {
-        nodejs('nodejs') // Requiere que tengas configurado el entorno Node.js en Jenkins
+        nodejs('nodejs') 
     }
     
     steps {
-        shell("docker build -t mi-nodejs-app .")  // Construye la imagen Docker
-        shell("docker run -p 3000:3000 mi-nodejs-app") // Ejecuta la imagen Docker
+        shell("docker build -t mi-nodejs-app .")  
+        shell("docker run -p 3000:3000 mi-nodejs-app") 
     }
     
     publishers {

@@ -2,9 +2,9 @@ job('MiAplicacionNodeJSDocker') {
     description('Pipeline para mi aplicación Node.js con Docker usando DSL')
     
     scm {
-        git('', 'main') { node ->
-            node / gitConfigName('<tu-nombre>')
-            node / gitConfigEmail('<tu-correo>')
+        git('https://github.com/luimungar3/nodejs_app', 'main') { node ->
+            node / gitConfigName('Miguel')
+            node / gitConfigEmail('correojenkins09@gmail.com')
         }
     }
     

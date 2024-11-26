@@ -2,9 +2,9 @@ job('MiAplicacionNodeJS') {
     description('aplicación Node.js usando DSL')
     
     scm {
-        git('https://github.com/<tu-usuario>/<tu-repositorio>.git', 'main') { node ->
-            node / gitConfigName('<tu-nombre>')
-            node / gitConfigEmail('<tu-correo>')
+        git('https://github.com/luimungar3/nodejs_app', 'main') { node ->
+            node / gitConfigName('Miguel')
+            node / gitConfigEmail('correojenkins09@gmail.com')
         }
     }
     

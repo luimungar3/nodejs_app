@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('prueba aplicación Node.js');
+    res.send('prueba aplicación version 2 Node.js');
 });
 
 const PORT = 3000;

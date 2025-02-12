@@ -17,9 +17,15 @@ job('MiAplicacionNodeJSDocker') {
     }
     
     steps {
-        shell("docker build -t mi-nodejs-app .")  
-        shell("docker run -p 3000:3000 mi-nodejs-app") 
-    }
+        dockerBuildAndPublish {
+            repositoryName('miguel7834/appnodejs')
+            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
+            registryCredentials('docker-hub')
+            forcePull(false)
+            createFingerprints(false)
+            skipDecorate()
+        }
+    } 
     
     publishers {
         slackNotifier {

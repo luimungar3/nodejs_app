@@ -18,7 +18,7 @@ job('AplicacionNodeJS_DSL') {
     
     steps {
         shell("npm install") 
-        shell("npm start")   
+        shell("npm start &")   
     }
     
     publishers {

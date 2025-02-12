@@ -13,7 +13,7 @@ job('MiAplicacionNodeJSDocker') {
     }
     
     wrappers {
-        nodejs('nodejs') 
+        nodejs('NodeJS') 
     }
     
     steps {

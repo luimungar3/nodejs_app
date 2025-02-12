@@ -3,22 +3,22 @@ job('MiAplicacionNodeJS') {
     
     scm {
         git('https://github.com/luimungar3/nodejs_app', 'main') { node ->
-            node / gitConfigName('Miguel')
+            node / gitConfigName('luimungar3')
             node / gitConfigEmail('correojenkins09@gmail.com')
         }
     }
     
     triggers {
-        scm('H/5 * * * *') // Revisa cambios cada 5 minutos
+        scm('H/5 * * * *') 
     }
     
     wrappers {
-        nodejs('nodejs') // Requiere que tengas configurado el entorno Node.js en Jenkins
+        nodejs('nodejs') 
     }
     
     steps {
-        shell("npm install") // Instala dependencias
-        shell("npm start")   // Inicia la aplicación
+        shell("npm install") 
+        shell("npm start")   
     }
     
     publishers {

@@ -1,4 +1,4 @@
-job('MiAplicacionNodeJS') {
+job('AplicacionNodeJS_DSL') {
     description('aplicación Node.js usando DSL')
     
     scm {

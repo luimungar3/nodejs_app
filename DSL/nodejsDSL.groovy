@@ -13,7 +13,7 @@ job('MiAplicacionNodeJS') {
     }
     
     wrappers {
-        nodejs('nodejs') 
+        nodejs('NodeJS') 
     }
     
     steps {
